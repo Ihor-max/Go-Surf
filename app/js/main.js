@@ -28,7 +28,7 @@ $(function () {
          focusOnSelect: true,
 
     });
-    $('.holder__slider').slick({
+    $('.holder__slider, shop__slider').slick({
         infinite: true,
         fade: true,
         prevArrow: '<img class="slider-arrows slider-arrows__left" src="/app/img/arrow-left.svg" alt=""></img>',
