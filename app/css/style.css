@@ -613,6 +613,71 @@ li {
   margin-bottom: 35px;
 }
 
+.quantity {
+  display: inline-block;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.quantity input {
+  width: 45px;
+  height: 42px;
+  display: block;
+  border: none;
+  background-color: transparent;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 36px;
+  color: #fff;
+}
+
+.quantity input:focus {
+  outline: 0;
+}
+
+.quantity-nav {
+  float: left;
+  position: relative;
+  height: 42px;
+  position: static;
+}
+
+.quantity-button {
+  position: relative;
+  cursor: pointer;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-button.quantity-up {
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+
+.quantity-button.quantity-down {
+  position: absolute;
+  top: 50px;
+  right: 25px;
+}
+
+.star-list li {
+  display: inline-block;
+}
+.star-list li + li {
+  margin-left: -25px;
+}
+
 .header {
   position: relative;
   height: 100vh;
@@ -1052,6 +1117,9 @@ li {
   background-position: bottom right;
   background-repeat: no-repeat;
 }
+.holder.sleep {
+  background-image: url(../img/Frangipani.png);
+}
 .holder .slider-arrows {
   top: 225px;
   opacity: 0.5;
@@ -1068,15 +1136,27 @@ li {
   margin-top: -230px;
   background-repeat: no-repeat;
   background-position: right center;
+  background-size: contain;
 }
 .holder-slider__descr .descr__head {
   position: relative;
-  padding-right: 78px;
+  padding-right: 68px;
+}
+.holder-slider__descr .descr__head.descr__head-sleep {
+  padding-right: 215px;
 }
 .holder-slider__descr .descr__head img {
   position: absolute;
   right: 0;
   top: 0;
+}
+.holder-slider__descr .descr__head .holder__star-list {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.holder-slider__descr .descr__head .holder__star-list img {
+  position: static;
 }
 .holder-slider__subtitle {
   text-align: right;
@@ -1119,7 +1199,7 @@ li {
   padding-left: 40px;
   position: relative;
 }
-.holder-slider__info-title span {
+.holder-slider__info-title .holder-pricing__span {
   font-size: 14px;
   line-height: 0px;
   font-weight: 400;
@@ -1129,4 +1209,128 @@ li {
   position: absolute;
   bottom: -8px;
   right: 0;
+}
+
+.shop {
+  background-image: url(../img/Shop\ Image-bg.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.shop__slider {
+  padding-left: 132px;
+}
+
+.shop__slider-inner {
+  display: flex;
+}
+
+.shop__slider-info {
+  max-width: 480px;
+  width: 100%;
+  margin-right: 40px;
+  padding-top: 150px;
+}
+
+.descr__head-shop {
+  max-width: 340px;
+  margin-bottom: 47px;
+}
+
+.shop__star-list {
+  margin-left: -9px;
+}
+
+.shop__slider_price {
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 64px;
+}
+.shop__slider_price sup {
+  font-size: 18px;
+  padding-left: 2px;
+}
+
+.shop__slider-content {
+  padding-left: 170px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.shop__extras {
+  padding-left: 170px;
+}
+
+.shop__extras-inner {
+  display: flex;
+}
+
+.shop__extras-title {
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 40px;
+  margin-bottom: 25px;
+}
+
+.shop__extras-box {
+  text-align: center;
+  margin-right: 57px;
+}
+
+.shop__extras-images {
+  min-height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.shop__extras-name {
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 8px;
+  opacity: 0.5;
+  margin-bottom: 16px;
+}
+
+.shop__extras-price {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.surfboard {
+  position: relative;
+}
+
+.surfboard-box {
+  position: absolute;
+  right: 50px;
+  top: 215px;
+}
+
+.surfboard-box__circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  background-color: #fff;
+  cursor: pointer;
+}
+.surfboard-box__circle.active .circle-row {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.circle-row {
+  background-color: #4af6cd;
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+.circle-row + .circle-row {
+  transform: translate(-50%, -50%) rotate(90deg);
 }
